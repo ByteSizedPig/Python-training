@@ -34,7 +34,21 @@ def listSort():
                 print(aList)
                 sorted = False
 
-listSort()
+def listSort2():
+    sorted = False
+    n = len(aList)
+    while sorted == False:
+        sorted = True
+        for i in range (0, n - 1):
+            if aList[i] > aList[i+1]:
+                j = aList[i+1]
+                aList[i+1] = aList[i]
+                aList[i] = j
+                print('w')
+                sorted = False
+
+#listSort()
+listSort2()
 print("-----------------------------------------------------")
 print("coding question from \"Coding Jesus\" YT video")
 
