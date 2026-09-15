@@ -23,13 +23,22 @@ with open("example data.json","r") as file:
 ###loop over each entry/object under "students" (cap sensitive)
 #for student in data["students"]:
 #    print(student["name"], "=" ,student["age"])
+key = "key string"
 
-string = "port1: 12345 \nport2: 12345 \nport3: 12345 \nport4: 12345 \nport5: 12345"
+value_string = "port1: 12345 \nport2: 12345 \nport3: 12345 \nport4: 12345 \nport5: 12345"
 
 to_dict = {}
 
-for value in string.split("\n"):
-    to_dict.update({"adw": "wadda"})
+value_array = value_string.split(" \n")
+
+for value in value_string.split("\n"):
+    to_dict.update({key: value_string})
+    to_dict.update({"key2": value_array})
 
 
 print(to_dict)
+print(to_dict["key2"])
+print(value_string.split(" \n"))
+print(len(value_string.split(" \n")))
+print(value_array)
+print(len(to_dict["key2"]))
